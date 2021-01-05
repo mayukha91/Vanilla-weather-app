@@ -14,10 +14,82 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hello World!</h1>
-      <button type="button" class="btn btn-primary">Primary</button>
-    </div>
+      <form>
+        <input type="text" placeholder="Enter a city" />
+        <button class="search"><i class="fas fa-search"></i></button>
+        <button class="loc">Current Location</button>
+      </form>
+      <ul>
+        <li><h1>Phoenix</h1></li>
+        <li>
+          <div class="row">
+            <div class="col-md-6">January 4</div>
+            <div class="col-md-6">20:43</div>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <div class="col">82 °C | °F</div>
+            <div class="col">
+              <div class="row">
+                <!--<div class="col">-->
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
+                  alt="yellow sun"
+                />
+                <!--</div>-->
+                <div class="row">cloudy</div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
 
+      <div class="row i">
+        <span class="col">Humidity</span>
+
+        <span class="col">Wind</span>
+
+        <span class="col">UV Index</span>
+        <span class="col">precipitation</span>
+      </div>
+
+      <hr>
+
+      <div class="data">
+        <div class="row r1">
+          <span class="col">nov 21 ☀️</span>
+          <span class="col">88°/54°</span>
+        </div>
+        <hr />
+
+        <div class="row r2">
+          <span class="col">nov 22 🌤</span>
+          <span class="col">84°/58°</span>
+        </div>
+        <hr />
+        <div class="row r1">
+          <span class="col">nov 23 ⛅️</span>
+          <span class="col">80°/48°</span>
+        </div>
+        <hr />
+        <div class="row r2">
+          <span class="col">nov 24 🌥</span>
+          <span class="col">73°/44°</span>
+        </div>
+        <hr />
+        <div class="row r1">
+          <span class="col">nov 25 ☁️</span>
+          <span class="col">73°/45°</span>
+        </div>
+        <small><a href="https://github.com/mayukha91/Vanilla-weather-app">open-source </a>by Suma</small>
+
+    </div>
+    <script
+      src="https://kit.fontawesome.com/7704f23f7f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
     <script src="src/index.js"></script>
   </body>
 </html>
