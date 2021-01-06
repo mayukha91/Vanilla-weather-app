@@ -1,9 +1,20 @@
 .container {
   margin: 20px auto;
   padding: 20px;
+  color: white;
+}
+.wrapper {
+  background-image: url("day_2.jpeg");
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  padding: 20px;
   border: 1px solid grey;
 }
+
 form {
+  position: relative;
+  right: -20px;
   padding-left: 30%;
   padding-bottom: 30px;
 }
@@ -28,14 +39,15 @@ ul {
 }
 .temp {
   text-align: end;
-  padding-top: 25px;
+  padding: 10px;
   font-size: larger;
 }
 .time {
   text-align: left;
 }
 .img1 {
-  max-width: 40%;
+  position: relative;
+  max-width: 120px;
   max-height: auto;
   padding-bottom: 0;
   margin-bottom: 0;
@@ -43,4 +55,19 @@ ul {
 .sub1 {
   text-align: center;
   padding-left: 15px;
+  position: relative;
+  top: -20px;
+  right: -16px;
+}
+.temp strong {
+  font-weight: bold;
+  font-size: 48px;
+}
+.temp small {
+  position: relative;
+  font-size: 16px;
+  top: -24px;
+}
+.data {
+  text-align: center;
 }
