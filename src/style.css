@@ -1,7 +1,7 @@
 .container {
   margin: 20px auto;
   padding: 20px;
-  color: white;
+  color: black;
 }
 .wrapper {
   background-image: url("day_2.jpeg");
@@ -69,5 +69,10 @@ ul {
   top: -24px;
 }
 .data {
+  text-align: center;
+}
+.i .col {
+  font-size: 20px;
+  color: #005e7c;
   text-align: center;
 }
