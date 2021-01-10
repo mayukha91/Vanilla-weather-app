@@ -15,14 +15,6 @@ let months = [
   "December",
 ];
 
-/*if (hour < 10) {
-  hour = `0${hour}`;
-}
-
-if (min < 10) {
-  min = `0${min}`;
-}*/
-
 let dayElement = document.querySelector(".day");
 let timeElement = document.querySelector(".time");
 let descElement = document.querySelector(".sub1");
@@ -92,6 +84,13 @@ function show(event) {
     let hour = date.getHours();
     console.log(hour);
     let min = date.getMinutes();
+    if (hour < 10) {
+      hour = `0${hour}`;
+    }
+
+    if (min < 10) {
+      min = `0${min}`;
+    }
     dayElement.innerHTML = formatDate(currentResponse); //`${months[month]} ${today}`;
     timeElement.innerHTML = `${hour}:${min}`;
     descElement.innerHTML = response.data.weather[0].description;
