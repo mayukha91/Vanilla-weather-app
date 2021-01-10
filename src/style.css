@@ -80,10 +80,11 @@ ul {
   color: black;
   text-align: center;
 }
-a {
-  text-decoration: none;
-  color: black;
-}
 a:focus {
   color: #609;
+}
+#cen,
+#fah {
+  text-decoration: none;
+  color: black;
 }
