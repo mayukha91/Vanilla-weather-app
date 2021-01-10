@@ -58,6 +58,7 @@ ul {
   position: relative;
   top: -20px;
   right: -13px;
+  text-transform: capitalize;
 }
 .temp strong {
   font-weight: bold;
@@ -80,6 +81,6 @@ a {
   text-decoration: none;
   color: black;
 }
-a:active {
-  color: blue;
+a:focus {
+  color: #609;
 }
