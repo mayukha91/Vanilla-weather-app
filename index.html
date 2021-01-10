@@ -18,7 +18,7 @@
     <div class="container">
       <div class="wrapper">
         <form>
-          <input type="text" placeholder="Enter a city" />
+          <input type="search" placeholder="Enter a city" />
           <button class="search"><i class="fas fa-search"></i></button>
         </form>
         <ul>
@@ -32,13 +32,18 @@
           <li>
             <div class="row">
               <div class="col-6 temp">
-                <strong>82 </strong> <small>°C | °F</small>
+                <strong>82 </strong>
+                <small
+                  ><a href="#" id="cen">°C</a> |
+                  <a href="#" id="fah">°F</a></small
+                >
               </div>
               <div class="col-6">
                 <div class="row img1">
                   <img
-                    src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                    alt="image"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt=""
+                    id="icon"
                   />
                 </div>
                 <div class="row sub1">Cloudy</div>
@@ -48,11 +53,11 @@
         </ul>
 
         <div class="row i">
-          <span class="col">Humidity - 45%</span>
+          <span class="col" id="humid">Humidity:45%</span>
 
-          <span class="col">Wind - 8 km/h</span>
+          <span class="col" id="windy">Wind:8 mph</span>
 
-          <span class="col">Visibility - 10mi</span>
+          <span class="col" id="visible">Visibility:10mi</span>
         </div>
 
         <hr />
@@ -77,11 +82,6 @@
           <div class="row r2">
             <span class="col">Jan 8 🌥</span>
             <span class="col">73°/44°</span>
-          </div>
-          <hr />
-          <div class="row r1">
-            <span class="col">Jan 9 ☁️</span>
-            <span class="col">73°/45°</span>
           </div>
         </div>
       </div>

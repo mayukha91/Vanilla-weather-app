@@ -11,11 +11,8 @@
   padding: 20px;
   border: 1px solid grey;
 }
-
 form {
-  position: relative;
-  right: -20px;
-  padding-left: 30%;
+  text-align: center;
   padding-bottom: 30px;
 }
 input {
@@ -24,12 +21,15 @@ input {
   border-radius: 10px;
   color: rgb(6, 18, 41);
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+  margin-right: 0;
 }
 .search {
+  line-height: 30px;
   border-radius: 10px;
   color: rgb(6, 18, 41);
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
 }
+
 ul {
   text-align: center;
   list-style: none;
@@ -57,7 +57,7 @@ ul {
   padding-left: 15px;
   position: relative;
   top: -20px;
-  right: -16px;
+  right: -13px;
 }
 .temp strong {
   font-weight: bold;
@@ -73,6 +73,13 @@ ul {
 }
 .i .col {
   font-size: 20px;
-  color: #005e7c;
+  color: black;
   text-align: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:active {
+  color: blue;
 }
