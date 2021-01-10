@@ -87,7 +87,11 @@ ul {
 .temp a:link {
   text-decoration: none;
 }
-a:focus {
-  color: purple;
+/*a:active {
+  color: purple !important;
   text-decoration: none;
 }
+a:focus {
+  color: purple !important;
+  text-decoration: none;
+}*/
