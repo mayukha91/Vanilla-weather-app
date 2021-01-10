@@ -4,7 +4,7 @@
   color: black;
 }
 .wrapper {
-  background-image: url("day_2.jpeg");
+  background-image: url("dan-aragon-akjkrzAURFs-unsplash.jpg");
   background-size: cover;
 
   background-repeat: no-repeat;
@@ -77,7 +77,7 @@ ul {
   text-align: center;
 }
 .i .col {
-  font-size: 20px;
+  font-size: 16px;
   color: black;
   text-align: center;
 }
