@@ -94,11 +94,13 @@ function show(event) {
     dayElement.innerHTML = formatDate(currentResponse); //`${months[month]} ${today}`;
     timeElement.innerHTML = `${hour}:${min}`;
     descElement.innerHTML = response.data.weather[0].description;
-    humidElement.innerHTML = `Humidity:${response.data.main.humidity}%`;
+    humidElement.innerHTML = `Humidity:${Math.round(
+      response.data.main.humidity
+    )}%`;
     windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}mph`;
-    visibleElement.innerHTML = `Visibility:${
+    visibleElement.innerHTML = `Visibility:${Math.round(
       response.data.visibility / 1000
-    } mi`;
+    )} mi`;
     iconElement.setAttribute(
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`

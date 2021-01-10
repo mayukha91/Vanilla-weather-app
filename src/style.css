@@ -29,6 +29,9 @@ input {
   color: rgb(6, 18, 41);
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
 }
+h1 {
+  text-transform: capitalize;
+}
 
 ul {
   text-align: center;
