@@ -22,6 +22,8 @@ let humidElement = document.querySelector("#humid");
 let windElement = document.querySelector("#windy");
 let visibleElement = document.querySelector("#visible");
 let iconElement = document.querySelector("#icon");
+let fah = document.querySelector("#fah");
+let cen = document.querySelector("#cen");
 let nextDay1 = document.querySelector("#day1");
 let nextDay1_temp = document.querySelector("#day1_Temp");
 let nextDay2 = document.querySelector("#day2");
@@ -32,11 +34,11 @@ let nextDay4 = document.querySelector("#day4");
 let nextDay4_temp = document.querySelector("#day4_Temp");
 
 function formatDate(timestamp) {
-  console.log(timestamp);
+  //console.log(timestamp);
   let date = new Date(timestamp);
   let month = date.getMonth();
   let today = date.getDate();
-  console.log(today);
+  console.log("Date: " + today);
   return `${months[month]} ${today}`;
 }
 
@@ -49,14 +51,6 @@ function show(event) {
 
   function showTemperature(response) {
     console.log(response.data);
-    /*if (hour < 6 || hour > 20) {
-      let bg = document.querySelector(".wrapper");
-
-      bg.style.backgroundImage = "url('src/night.jpeg')";
-      bg.style.backgroundSize = "cover";
-      bg.style.backgroundRepeat = "no-repeat";
-      bg.style.color = "white";
-    }*/
 
     let h1 = document.querySelector("h1");
     h1.innerHTML = city;
@@ -77,13 +71,30 @@ function show(event) {
     }
     fah.addEventListener("click", replaceWithF);
     let currentResponse =
-      response.data.dt * 1000 + response.data.timezone / 3600;
+      (response.data.dt +
+        new Date().getTimezoneOffset() * 60 +
+        response.data.timezone) *
+      1000;
     //console.log(currentResponse);
     let date = new Date(currentResponse);
     console.log(date);
     let hour = date.getHours();
+    //let hour = 5;
     console.log(hour);
     let min = date.getMinutes();
+    if (hour < 6 || hour > 20) {
+      let bg = document.querySelector(".wrapper");
+      let a1 = document.querySelector("a");
+      bg.style.backgroundImage = "url('src/night.jpeg')";
+      bg.style.backgroundSize = "cover";
+      bg.style.backgroundRepeat = "no-repeat";
+      bg.style.color = "white";
+      humidElement.style.color = "white";
+      windElement.style.color = "white";
+      visibleElement.style.color = "white";
+      fah.style.color = "white";
+      cen.style.color = "white";
+    }
     if (hour < 10) {
       hour = `0${hour}`;
     }
@@ -138,19 +149,30 @@ function show(event) {
       let min = date.getMinutes();
       dayElement.innerHTML = formatDate(currentResponse); //`${months[month]} ${today}`;
       timeElement.innerHTML = `${hour}:${min}`;*/
-      nextDay1.innerHTML = formatDate(response.data.daily[1].dt * 1000);
+      nextDay1.innerHTML = formatDate(
+        (response.data.daily[1].dt + response.data.timezone_offset) * 1000
+      );
       nextDay1_temp.innerHTML = `${Math.round(
         response.data.daily[1].temp.max
       )}°/ ${Math.round(response.data.daily[1].temp.min)}°`;
-      nextDay2.innerHTML = formatDate(response.data.daily[2].dt * 1000);
+
+      nextDay2.innerHTML = formatDate(
+        (response.data.daily[2].dt + response.data.timezone_offset) * 1000
+      );
       nextDay2_temp.innerHTML = `${Math.round(
         response.data.daily[2].temp.max
       )}°/ ${Math.round(response.data.daily[2].temp.min)}°`;
-      nextDay3.innerHTML = formatDate(response.data.daily[3].dt * 1000);
+
+      nextDay3.innerHTML = formatDate(
+        (response.data.daily[3].dt + response.data.timezone_offset) * 1000
+      );
       nextDay3_temp.innerHTML = `${Math.round(
         response.data.daily[3].temp.max
       )}°/ ${Math.round(response.data.daily[3].temp.min)}°`;
-      nextDay4.innerHTML = formatDate(response.data.daily[4].dt * 1000);
+
+      nextDay4.innerHTML = formatDate(
+        (response.data.daily[4].dt + response.data.timezone_offset) * 1000
+      );
       nextDay4_temp.innerHTML = `${Math.round(
         response.data.daily[4].temp.max
       )}°/ ${Math.round(response.data.daily[4].temp.min)}°`;
